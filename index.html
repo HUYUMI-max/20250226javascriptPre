@@ -10,5 +10,28 @@
         ul { list-style-type: none; padding: 0;}
         li { background: #f0f0f0; margin: 5px; padding: 5px;}
     </style>
-</head>    
+</head> 
+<body>
+    <h1 id="main-title">JavaScript DOM操作テスト</h1>
+    <p id="message">ここにメッセージが表示されます。</p>
+
+    <button id="changeTextBtn">テキスト変更</button>
+    <button id="addItemBtn">リストに追加</button>
+    <button id="removeItemBtn">最後のアイテムを削除</button>
+    <button id="fetchDataBtn">データを取得</button>
+
+    <ul id="list">
+        <li>アイテム1</li>
+        <li>アイテム2</li>
+    </ul>
+
+    <script>
+
+        document.getElementById("chengeTextBtn").addEventListener("click", function(){
+            document.getElementById("main-title").textContent = "タイトルが変更されました";
+            document.getElementById("message").textContent = "ボタンが押されました";
+        });
+    </script>
+
+</body>   
 </html>
