@@ -27,9 +27,22 @@
 
     <script>
 
-        document.getElementById("chengeTextBtn").addEventListener("click", function(){
+        document.getElementById("changeTextBtn").addEventListener("click", function(){
             document.getElementById("main-title").textContent = "タイトルが変更されました";
             document.getElementById("message").textContent = "ボタンが押されました";
+        });
+
+        document.getElementById("addItemBtn").addEventListener("click", function(){
+            let newItem = document.createElement("li");
+            newItem.textContent = "新しいアイテム";
+            document.getElementById("list").appendChild(newItem);
+        });
+
+        document.getElementById("removeItemBtn").addEventListener("click", function(){
+            let list = document.getElementById("list");
+            if (list.children.length > 0) {
+                list.removeChild(list.lastChild);
+            }
         });
     </script>
 
