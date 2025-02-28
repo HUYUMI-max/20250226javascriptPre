@@ -19,6 +19,8 @@
     <button id="addItemBtn">リストに追加</button>
     <button id="removeItemBtn">最後のアイテムを削除</button>
     <button id="fetchDataBtn">データを取得</button>
+    <button id="keydownTestBtn">キー入力テスト</button>
+    <p id="keydownMessage">ここにキー入力の情報が表示されます。</p>
 
     <ul id="list">
         <li>アイテム1</li>
@@ -43,6 +45,18 @@
             if (list.children.length > 0) {
                 list.removeChild(list.lastChild);
             }
+        });
+
+        document.addEventListener("keydown", function(event){
+            document.getElementById("keydownMessage").textContent = `キーが押されました: ${event.key}`;
+        });
+
+        document.getElementById("main-title").addEventListener("mouseover", function(){
+            this.style.color = "red";
+        });
+
+        document.getElementById("main-title").addEventListener("mouseout", function(){
+            this.style.color = "";
         });
     </script>
 
